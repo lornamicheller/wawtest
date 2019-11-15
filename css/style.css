@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+html,
+body {
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+}
+
+.header-bg {
+    height: 100vh;
+    background: url('../images/Rectangle 262.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0 !important;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 15px;
+    font-family: "Quicksand", sans-serif;
+
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    height: auto;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #111;
+}
+
+.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+
+.black-box {
+    width: 100%;
+    height: 250px;
+    z-index: 1000;
+    background: #1A1A1A;
+    margin-top: 250px;
+    padding: 0 !important;
+}
+
+.calendar-corner1 {
+    background: url('../images/Group 45.png')no-repeat;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-position: left;
+}
+
+.calendar-corner2 {
+    background: url('../images/Group 44.png')no-repeat;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-position: right;
+}
+
+.offer-title {
+    color: #E9C273;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 15px;
+}
+
+.price-title {
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+#hotel-info {
+    background: #1A1A1A;
+}
+
+#hotel-info p {
+    font-size: 15px;
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    
+}
+
+#hotel-info h3 {
+    color: #E9C273;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    /* text-align: center; */
+}
+
+.corner-1 {
+    background: url('../images/Group 39.png')no-repeat;
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+    background-position: right;
+
+}
+
+.corner-2 {
+    background: url('../images/Group 38.png')no-repeat;
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+    float: right;
+    background-position: left;
+}
+
+.corner-3 {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background: url('../images/Group 40.png');
+    background-position: top right;
+}
+
+.corner-4 {
+background: url('../images/Group 41.png');
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    float: right;
+}
+
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
+    height: 300px;
+}
+
+.box-1 {
+    background: url('../images/Rectangle 263.jpg');
+    background-size: cover;
+}
+
+.box-2 {
+    background: url('../images/Rectangle 264.jpg');
+    background-size: cover;
+}
+
+.box-3 {
+    background: url('../images/Rectangle 265.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.box-4 {
+    background: url('../images/Rectangle 266.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.box-5 {
+    background: url('../images/Rectangle 267.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.box-6 {
+    background: url('../images/Rectangle 268.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.frame {
+    padding: 5px !important;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+padding: 40px;
+}
+
+.container-text {
+    color: #E9C273 !important;
+    font-size: 50px !important;
+    margin-top: 80px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+.container-text2 {
+    color: #fff !important;
+    margin-top: 5px;
+    font-size: 20px !important;
+    margin-top: 0;
+    margin-left: 30px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+    margin: auto;
+    transition: 0.2s;
+  }
+
+  .overlay2 {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+    margin: auto;
+    transition: 0.2s;
+    background: rgba(0, 0, 0, 0.507);
+  }
+  .overlay:hover {
+    background-color: rgba(136, 136, 136, 0.466);
+  }
+
+#gallery h3 {
+    color: #1A1A1A;
+    font-family: "Quicksand", sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#gallery p {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    color: #E9C273;
+    font-size: 20px;
+}
+
+#contact {
+    background: #1A1A1A;
+    padding-top: 50px;
+}
+
+#contact h1 {
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+#contact h3 {
+    color: #E9C273;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.carousel-item p {
+    color: white;
+    margin: 50px;
+    margin-top: 0;
+    text-align: justify;
+    font-family: "Quicksand", sans-serif;
+margin-top: 10px;
+}
+
+.btn-primary {
+    background: #E9C273 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    color: #1A1A1A !important;
+    font-family: "Quicksand", sans-serif;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.news-letter-title {
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+    text-align: center;
+}
+
+.news-letter-input {
+    border-radius: 0 !important;
+}
+
+.contact-info {
+    color: white;
+    font-family: "Quicksand", sans-serif;
+
+}
+
+.contact-info-2 {
+    margin-top: 20px;
+    color: #E9C273;
+    font-size: 17px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.social-icons {
+    width: 100px;
+}
+
+.copy-text {
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    margin-top: 120px;
+    text-align: center;
+}
+
+
+/* Media qurey section */
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+        margin-top: 20px;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+
+    .corner-container {
+        display: none;
+    }
+
+    .calendar-corner1 {
+        display: none;
+    }
+
+    .calendar-corner2 {
+        display: none;
+    }
+}
